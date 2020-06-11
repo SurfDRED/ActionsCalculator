@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:background="@android:color/background_dark"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        style="@style/Toolbar"
+        android:layout_width="match_parent"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/calculator_tolbar"
+        app:subtitle="@string/SubTitle"
+        app:subtitleTextAppearance="@style/Toolbar.SubTitle"
+        app:title="@string/Title"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <LinearLayout
+        android:id="@+id/BaseLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtDisplay"
+            style="@style/Text"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorText"
+            android:textSize="80sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/WorkLine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/BaseLine"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/LeftBlock"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@android:color/background_dark"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/LeftOne"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/background_dark"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/btnClear"
+                    layout="@layout/btn_style_grey"
+                    android:text="@string/btnTextClean" />
+
+                <include
+                    android:id="@+id/btnPm"
+                    layout="@layout/btn_style_grey"
+                    android:text="@string/btnTextPm" />
+
+                <include
+                    android:id="@+id/btnPercent"
+                    layout="@layout/btn_style_grey"
+                    android:text="@string/btnTextPercent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LeftTwo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/background_dark"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/btnSeven"
+                    layout="@layout/btn_style_grey"
+                    android:text="@string/btnTextSeven" />
+
+                <include
+                    android:id="@+id/btnEight"
+                    layout="@layout/btn_style_grey"
+                    android:text="@string/btnTextEight" />
+
+                <include
+                    android:id="@+id/btnNine"
+                    layout="@layout/btn_style_grey"
+                    android:text="@string/btnTextNine" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LeftThree"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/background_dark"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/btnFour"
+                    layout="@layout/btn_style_grey"
+                    android:text="@string/btnTextFour" />
+
+                <include
+                    android:id="@+id/btnFive"
+                    layout="@layout/btn_style_grey"
+                    android:text="@string/btnTextFive" />
+
+                <include
+                    android:id="@+id/btnSix"
+                    layout="@layout/btn_style_grey"
+                    android:text="@string/btnTextSix" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LeftFour"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/background_dark"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/btnOne"
+                    layout="@layout/btn_style_grey"
+                    android:text="@string/btnTextOne" />
+
+                <include
+                    android:id="@+id/btnTwo"
+                    layout="@layout/btn_style_grey"
+                    android:text="@string/btnTextTwo" />
+
+                <include
+                    android:id="@+id/btnThree"
+                    layout="@layout/btn_style_grey"
+                    android:text="@string/btnTextThree" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LeftFive"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/background_dark"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/btnZero"
+                    layout="@layout/btn_style_grey"
+                    android:text="@string/btnTextZero" />
+
+                <include
+                    android:id="@+id/btnPoint"
+                    layout="@layout/btn_style_grey_weight"
+                    android:text="@string/btnTextPoint" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/RightBlock"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/background_dark"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/RightOne"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/btnShare"
+                    layout="@layout/btn_style_orange"
+                    android:text="@string/btnTextShare" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/RightTwo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/btnMultiply"
+                    layout="@layout/btn_style_orange"
+                    android:text="@string/btnTextMultiply" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/RightThree"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/btnMinus"
+                    layout="@layout/btn_style_orange"
+                    android:text="@string/btnTextMinus" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/RightFour"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/btnPlus"
+                    layout="@layout/btn_style_orange"
+                    android:text="@string/btnTextPlus" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/RightFive"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/btnEqually"
+                    layout="@layout/btn_style_orange"
+                    android:text="@string/btnTextEqually" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

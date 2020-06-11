@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Действия калькулятора</string>
+    <string name="Title">Действия калькулятора</string>
+    <string name="SubTitle">Ячменцев Д. Н.</string>
+    <!-- Блок панель действия верхняя-->
+    <string name="btnTextClean">C</string>
+    <string name="btnTextPm">+/-</string>
+    <string name="btnTextPercent">%</string>
+    <!-- Блок цыфр-->
+    <string name="btnTextSeven">7</string>
+    <string name="btnTextEight">8</string>
+    <string name="btnTextNine">9</string>
+    <string name="btnTextFour">4</string>
+    <string name="btnTextFive">5</string>
+    <string name="btnTextSix">6</string>
+    <string name="btnTextOne">1</string>
+    <string name="btnTextTwo">2</string>
+    <string name="btnTextThree">3</string>
+    <string name="btnTextZero">0</string>
+    <string name="btnTextPoint">.</string>
+    <!-- Блок панель действия боковая-->
+    <string name="btnTextShare">÷</string>
+    <string name="btnTextMultiply">X</string>
+    <string name="btnTextMinus">-</string>
+    <string name="btnTextPlus">+</string>
+    <string name="btnTextEqually">=</string>
+</resources>
